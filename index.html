@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SEM Myanmar</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .movie-card {
+            border-left: 5px solid #0d6efd;
+            background-color: #ffffff;
+        }
+        .contact-box {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 6px;
+        }
+        footer {
+            background-color: #212529;
+            color: white;
+            padding: 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+        <span class="navbar-brand">SEM Myanmar</span>
+    </div>
+</nav>
+
+<!-- Search Section -->
+<div class="container my-4">
+    <input type="text" id="searchTitle" class="form-control"
+           placeholder="Search by movie title..." onkeyup="searchMovies()">
+</div>
+
+<!-- Movie List -->
+<div class="container">
+    <div class="row" id="movieList">
+
+        <div class="col-md-4 mb-3 movie">
+            <div class="card movie-card p-3">
+                <h5 class="movie-title">Avatar</h5>
+                <p><strong>Release Date:</strong> 2009</p>
+                <a href="https://t.me/SEMnetflix">View in Telegram</a>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3 movie">
+            <div class="card movie-card p-3">
+                <h5 class="movie-title">Avatar The Way of Water</h5>
+                <p><strong>Release Date:</strong> 2021</p>
+                <a href="https://t.me/SEMnetflix">View in Telegram</a>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3 movie">
+            <div class="card movie-card p-3">
+                <h5 class="movie-title">Bullet Train</h5>
+                <p><strong>Release Date:</strong> 2021</p>
+                <a href="https://t.me/SEMnetflix">View in Telegram</a>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3 movie">
+            <div class="card movie-card p-3">
+                <h5 class="movie-title">Black Adam</h5>
+                <p><strong>Release Date:</strong> 2022</p>
+                <a href="https://t.me/SEMnetflix">View in Telegram</a>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3 movie">
+            <div class="card movie-card p-3">
+                <h5 class="movie-title">Dune Part One</h5>
+                <p><strong>Release Date:</strong> 2021</p>
+                <a href="https://t.me/SEMnetflix">View in Telegram</a>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3 movie">
+            <div class="card movie-card p-3">
+                <h5 class="movie-title">Dune Part Two</h5>
+                <p><strong>Release Date:</strong> 2024</p>
+                <a href="https://t.me/SEMnetflix">View in Telegram</a>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3 movie">
+            <div class="card movie-card p-3">
+                <h5 class="movie-title">Daredevil Born Again</h5>
+                <p><strong>Release Date:</strong> 2023</p>
+                <a href="https://t.me/SEMnetflix">View in Telegram</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Contact Admin Section -->
+<div class="container my-5">
+    <div class="contact-box">
+        <h4>Contact Admin</h4>
+        <p><i class="bi bi-telephone"></i> Phone: +91 98765 43210</p>
+        <p><i class="bi bi-envelope"></i> Email: admin@moviereviews.com</p>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+    © 2026 SEM Myanmar
+</footer>
+
+<!-- JavaScript -->
+<script>
+function searchMovies() {
+    let input = document.getElementById("searchTitle").value.toLowerCase();
+    let movies = document.getElementsByClassName("movie");
+
+    for (let movie of movies) {
+        let title = movie.querySelector(".movie-title").innerText.toLowerCase();
+        movie.style.display = title.includes(input) ? "block" : "none";
+    }
+}
+</script>
+
+</body>
+</html>
